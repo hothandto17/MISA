@@ -1,0 +1,5 @@
+@import url(../variables/variables.css);
+.mmain{
+    background-color: var(--main-color);
+    padding: 16px 24px 48px 24px;
+}

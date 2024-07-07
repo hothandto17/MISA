@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý nhân viên</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/views/NVList.css" />
+  </head>
+  <body>
+
+    <!-- Form -->
+    <div class="div--background div--hidden div--form-container">
+      <form action="" class="form--employee-detail">
+        <div class="form__div--section width--100 form__div--section-padding">
+          <div class="form__div--header flex--horizontal">
+            <span class="form__span--title">Thông tin nhân viên</span>
+            <button
+              data-closecomponent="div--form-container"
+              type="button"
+              class="btn--close btn--iconbtn btn--padding-6 btn--no-border"
+            >
+              <img
+                class="btn__img--iconbtn-24"
+                src="./assets/icon/close-48.png"
+                alt="close icon"
+              />
+            </button>
+          </div>
+          <div class="flex--horizontal flex--space-between">
+            <div class="form__div--section">
+              <div class="flex--horizontal flex--space-between">
+                <div class="flex__div--input-box width--40">
+                  <label class="form__label" for="employee-code">
+                    Mã nhân viên <span class="span--must-have">*</span>
+                  </label>
+                  <input class="form__input" type="text" id="employee-code" />
+                </div>
+                <div class="flex__div--input-box width--60">
+                  <label class="form__label" for="employee-name">
+                    Họ và tên <span class="span--must-have">*</span>
+                  </label>
+                  <input class="form__input" type="text" id="employee-name" />
+                </div>
+              </div>
+              <div class="flex__div--input-box">
+                <label class="form__label" for="employee-position"
+                  >Vị trí</label
+                >
+                <div
+                  Positions
+                  class="container--combobox no-margin width--100"
+                  id="employee-position"
+                >
+                  <div tabindex="0" class="div--combobox-trigger">
+                    <span class="div__span--current-value"></span>
+                    <button
+                      type="button"
+                      class="btn--no-border combobox__btn--iconbtn"
+                    >
+                      <img
+                        class="btn__img--iconbtn-24"
+                        src="./assets/icon/Layer 2@2x.png"
+                        alt="down-arrow"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    tabindex="0"
+                    id="combobox"
+                    class="div--combobox-options div--hidden"
+                  >
+                    <span
+                      class="div__span--combobox-option"
+                      value="Chi nhánh Hà Nội"
+                      >Chi nhánh Hà Nội</span
+                    >
+                    <span
+                      class="div__span--combobox-option"
+                      value="Chi nhánh Hải Phòng"
+                      >Chi nhánh Nghệ An</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="flex__div--input-box">
+                <label class="form__label" for="employee-department"
+                  >Phòng ban</label
+                >
+                <div
+                  Departments
+                  class="container--combobox no-margin width--100"
+                  id="employee-department"
+                >
+                  <div tabindex="1" class="div--combobox-trigger">
+                    <span class="div__span--current-value"></span>
+                    <button
+                      type="button"
+                      class="btn--no-border combobox__btn--iconbtn"
+                    >
+                      <img
+                        class="btn__img--iconbtn-24"
+                        src="./assets/icon/Layer 2@2x.png"
+                        alt="down-arrow"
+                      />
+                    </button>
+                  </div>
+                  <div id="combobox" class="div--combobox-options div--hidden">
+                    <span
+                      class="div__span--combobox-option"
+                      value="Chi nhánh Hà Nội"
+                      >Chi nhánh Hà Nội</span
+                    >
+                    <span
+                      class="div__span--combobox-option"
+                      value="Chi nhánh Hải Phòng"
+                      >Chi nhánh Nghệ An</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__div--section">
+              <div class="flex--horizontal flex--space-between">
+                <div class="flex__div--input-box width--40">
+                  <label class="form__label" for="employee-birth"
+                    >Ngày sinh
+                  </label>
+                  <input
+                    value="2003-10-21"
+                    class="form__input input--custom-date-picker"
+                    type="date"
+                    id="employee-name"
+                  />
+                </div>
+                <div class="flex__div--input-box width--60">
+                  <label class="form__label" for="employee-gender"
+                    >Giới tính
+                  </label>
+                  <div
+                    class="form__div--radio-box flex--space-between flex--horizontal flex--ac"
+                  >
+                    <input type="radio" name="gender" id="employee-gender" />
+                    Nam
+                    <input type="radio" name="gender" id="employee-gender" />
+                    Nữ
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="employee-gender"
+                    />Khác
+                  </div>
+                </div>
+              </div>
+              <div class="flex--horizontal flex--space-between">
+                <div class="flex__div--input-box width--100">
+                  <label class="form__label" for="employee-id">Số CMTND </label>
+                  <input
+                    type="text"
+                    class="form__input width--100"
+                    id="employee-id"
+                  />
+                </div>
+                <div class="flex__div--input-box">
+                  <label class="form__label" for="employee-id-date"
+                    >Ngày cấp
+                  </label>
+                  <input
+                    value="2003-10-21"
+                    class="form__input form__input--width-200 input--custom-date-picker"
+                    type="date"
+                    id="employee-id-date"
+                  />
+                </div>
+              </div>
+              <div class="flex__div--input-box width--100">
+                <label class="form__label" for="employee-id-place"
+                  >Nơi cấp
+                </label>
+                <input
+                  type="text"
+                  class="form__input width--100"
+                  id="employee-id-place"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-add">Địa chỉ </label>
+            <input
+              type="text"
+              class="form__input width--100"
+              id="employee-add"
+            />
+          </div>
+          <div class="flex--horizontal flex--space-between width--100">
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-smart-phone"
+                >ĐT Di động
+              </label>
+              <input
+                type="text"
+                class="form__input width--100"
+                id="employee-smart-phone"
+              />
+            </div>
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-phone"
+                >Đt Cố định
+              </label>
+              <input
+                type="text"
+                class="form__input width--100"
+                id="employee-phone"
+              />
+            </div>
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-email">Email </label>
+              <input
+                type="text"
+                class="form__input width--100"
+                id="employee-email"
+              />
+            </div>
+          </div>
+          <div class="flex--horizontal flex--space-between width--100">
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-account-name"
+                >Tài khoản ngân hàng
+              </label>
+              <input
+                type="text"
+                class="form__input width--100"
+                id="employee-account-name"
+              />
+            </div>
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-bank-name"
+                >Tên ngân hàng
+              </label>
+              <input
+                type="text"
+                class="form__input width--100"
+                id="employee-bank-name"
+              />
+            </div>
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-bank-add"
+                >Chi nhánh
+              </label>
+              <input
+                type="text"
+                class="form__input width--100"
+                id="employee-bank-add"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__div--btn-box flex--horizontal-reverse width--100">
+          <div class="flex--horizontal flex--gap-12">
+            <button type="button" class="form__btn form__btn--border">
+              Hủy
+            </button>
+            <button type="button" class="form__btn">Cắt</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Popup -->
+    <div class="div--background div--popup-container div--hidden">
+      <div class="popup">
+        <div class="flex--horizontal width--100 flex--space-between">
+          <span class="popup__span--title">Tiêu đề </span>
+          <button 
+          data-closecomponent="div--popup-container"
+          class="btn--iconbtn btn--close">
+            <img
+              class="btn__img--iconbtn"
+              src="./assets/icon/close-48.png"
+              alt="close icon"
+            />
+          </button>
+        </div>
+        <span class="popup__span--msg">Thông điệp </span>
+        <div class="popup__div--btn-box">
+          <button class="form__btn--border form__btn">action</button>
+          <button class="form__btn warning">action</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="date-picker">
+      
+    </div>
+
+    <!-- UI -->
+    <div class="container" id="employee-list">
+      <header class="mheader header--grid-item">
+        <button class="header__btn--iconbtn btn--iconbtn">
+          <img
+            class="btn__img--iconbtn"
+            src="./assets/img/toggle.png"
+            alt="side bar"
+          />
+        </button>
+        <img
+          class="header__img--logo"
+          src="./assets/img/cukcuk-logo.png"
+          alt="Misa logo"
+        />
+        <div Positions class="container--combobox grid--item--align-left">
+          <div tabindex="0" class="div--combobox-trigger">
+            <span class="div__span--current-value">Chi nhánh Hà Nội</span>
+            <button tabindex="0" class="combobox__btn--iconbtn">
+              <img
+                class="btn__img--iconbtn"
+                src="./assets/icon/Layer 2@2x.png"
+                alt="down-arrow"
+              />
+            </button>
+          </div>
+          <div id="combobox" class="div--combobox-options div--hidden">
+            <span class="div__span--combobox-option" value="Chi nhánh Hà Nội"
+              >Chi nhánh Hà Nội</span
+            >
+            <span class="div__span--combobox-option" value="Chi nhánh Hải Phòng"
+              >Chi nhánh Nghệ An</span
+            >
+          </div>
+        </div>
+        <img
+          class="header__img--avatar grid--item--align-right"
+          src="./assets/icon/avatar-default.png"
+          alt="Avatar image"
+        />
+        <span class="grid--item--align-left header__span--username"
+          >Hồ Sĩ Toàn</span
+        >
+        <button class="mr-24 btn--iconbtn grid--item--align-right">
+          <img
+            class="btn__img--iconbtn"
+            src="./assets/icon/option.png"
+            alt="option"
+          />
+        </button>
+      </header>
+      <nav class="mnav nav--grid-item nav--container">
+        <span class="nav__span--menu-item">
+          <img
+            class="span__img--icon"
+            src="./assets/icon/dashboard.png"
+            alt="dashboard"
+          />Trang chủ
+        </span>
+        <span class="nav__span--menu-item">
+          <img
+            class="span__img--icon"
+            src="./assets/icon/report.png"
+            alt="report"
+          />Báo cáo
+        </span>
+        <span class="nav__span--menu-item">
+          <img
+            class="span__img--icon"
+            src="./assets/icon/dic-employee.png"
+            alt="dic-employee"
+          />Nhân viên
+        </span>
+        <span class="nav__span--menu-item">
+          <img
+            class="span__img--icon"
+            src="./assets/icon/setting.png"
+            alt="setting"
+          />Cài đặt
+        </span>
+        <span class="nav__span--menu-item nav__span--menu-item-last">
+          <img
+            class="span__img--icon span__img--icon-last"
+            src="./assets/icon/arrowhead-left-outline.svg"
+            alt="dashboard"
+          />Thu gọn
+        </span>
+      </nav>
+      <main class="mmain main--grid-item">
+        <div class="main__div--table-container">
+          <div class="main__div--table-name">
+            <span class="div__span--table-name">Quản lý nhân viên</span>
+            <button id="addbtn" type="button" class="div__btn">
+              <img
+                class="btn__img--iconbtn"
+                src="./assets/icon/add.png"
+                alt="add"
+              />Thêm mới
+            </button>
+          </div>
+          <div class="main__div--table-subcontainer">
+            <div class="main__div--table-func">
+              <div class="main__div--searchbox">
+                <input
+                  class="div__input--search"
+                  type="text"
+                  placeholder="Tìm kiếm theo vị trí, phòng ban"
+                />
+                <button class="btn--iconbtn">
+                  <img
+                    class="btn__img--iconbtn"
+                    src="./assets/icon/search.png"
+                    alt="search logo"
+                  />
+                </button>
+              </div>
+              <div class="main__div--btnbox">
+                <button class="btn--iconbtn btn--padding-6">
+                  <img
+                    src="./assets/icon/export-excel-50.png"
+                    alt="export logo"
+                    class="btn__img--iconbtn-18"
+                  />
+                </button>
+                <button class="btn--iconbtn btn--padding-6">
+                  <img
+                    src="./assets/icon/refresh.png"
+                    alt="export logo"
+                    class="btn__img--iconbtn-18"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="main__div--table-content">
+              <table class="employee__table">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Mã nhân viên</th>
+                    <th>Họ và tên</th>
+                    <th>Giới tính</th>
+                    <th>Ngày sinh</th>
+                    <th>Địa chỉ Email</th>
+                    <th>Địa chỉ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>NV 12345</td>
+                    <td>Nguyễn Tiến Dũng</td>
+                    <td></td>
+                    <td>21/10/2003</td>
+                    <td>btdungblr@gmail.com</td>
+                    <td>
+                      số nhà 17
+
+                      <div class="main__div--btnbox div--hidden">
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/pencil_152679.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/close-48.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>NV 43245</td>
+                    <td>Bùi Tuấn Tài</td>
+                    <td></td>
+                    <td>21/10/2001</td>
+                    <td>123412r@gmail.com</td>
+                    <td>
+                      số nhà 23
+
+                      <div class="main__div--btnbox div--hidden">
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/pencil_152679.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/close-48.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>NV 17565</td>
+                    <td>Trần Sĩ Dũng</td>
+                    <td></td>
+                    <td>21/5/2003</td>
+                    <td>adda@gmail.com</td>
+                    <td>
+                      số nhà 7
+
+                      <div class="main__div--btnbox div--hidden">
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/pencil_152679.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/close-48.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>NV 12345</td>
+                    <td>Bùi Tuấn Dũng</td>
+                    <td></td>
+                    <td>21/10/2003</td>
+                    <td>btdungblr@gmail.com</td>
+                    <td>
+                      số nhà 17
+
+                      <div class="main__div--btnbox div--hidden">
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/pencil_152679.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/close-48.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>NV 12345</td>
+                    <td>Bùi Tuấn Dũng</td>
+                    <td></td>
+                    <td>21/10/2003</td>
+                    <td>btdungblr@gmail.com</td>
+                    <td>
+                      số nhà 17
+
+                      <div class="main__div--btnbox div--hidden">
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/pencil_152679.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                        <button class="btn--iconbtn btn--padding-6">
+                          <img
+                            src="./assets/icon/close-48.png"
+                            alt="export logo"
+                            class="btn__img--iconbtn-18"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="main__div--table-page">
+              <span class="div__span"> Tổng : <strong>5</strong> </span>
+              <div class="div__div--subcontainer">
+                <span class="div__span">Số bản ghi/trang:</span>
+                <div class="main__div--numberbox">
+                  <input class="div__input--number" type="number" value="10" />
+                  <button class="btn--iconbtn">
+                    <img
+                      class="btn__img--iconbtn-18"
+                      src="./assets/icon/Layer 2.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <span class="div__span">1 - 4 bản ghi</span>
+                <div class="main__div--btnbox ml-22">
+                  <button class="btn--iconbtn">
+                    <img
+                      class="btn__img--iconbtn"
+                      src="./assets/icon/btn-prev-page.svg"
+                      alt="previos"
+                    />
+                  </button>
+                  <button class="btn--iconbtn">
+                    <img
+                      class="btn__img--iconbtn"
+                      src="./assets/icon/btn-next-page.svg"
+                      alt="next"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- scipt -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/NVList.js"></script>
+  </body>
+</html>

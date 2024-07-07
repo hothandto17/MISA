@@ -1,0 +1,73 @@
+
+@import url(../components/header.css);
+@import url(../components/nav.css);
+@import url(../components/main.css);
+@import url(../components/img.css);
+@import url(../components/button.css);
+@import url(../components/select.css);
+@import url(../components/span.css);
+@import url(../components/div.css);
+@import url(../components/input.css);
+@import url(../components/table.css);
+@import url(../components/label.css);
+@import url(../components/form.css);
+@import url(../layouts/flex.css);
+@import url(../layouts/grid.css);
+
+@font-face {
+    font-family: Roboto-medium;
+    src: url(../../assets/font/GoogleSans-Medium.otf);
+}
+@font-face {
+    font-family: Roboto-bold;
+    src: url(../../assets/font/GoogleSans-Bold.otf);
+}
+@font-face {
+    font-family: Roboto-light;
+    src: url(../../assets/font/GoogleSans-Light.otf);
+}
+@font-face {
+    font-family: Roboto-regular;
+    src: url(../../assets/font/GoogleSans-Regular.otf);
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    
+}
+header{
+    font-family: 'Roboto';
+}
+.mr-24{
+    margin-right: 24px;
+}
+
+.ml-22{
+    margin-left: 22px;
+}
+
+header{
+    font-family: 'Roboto';
+}
+.mr-24{
+    margin-right: 24px;
+}
+
+.ml-22{
+    margin-left: 22px;
+}
+
+.no-margin{
+    margin: 0;
+}
+.width--100{
+    width: 100%;
+}
+.width--40{
+    width: 40%;
+}
+.width--60{
+    width: 60%;
+}
