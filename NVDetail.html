@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/views/NVDetail.css" />
+  </head>
+  <body>
+    <form action="" class="form--employee-detail">
+      <div class="form__div--section width--100 form__div--section-padding">
+
+        <div class="form__div--header flex--horizontal">
+          <span class="form__span--title">Thông tin nhân viên</span>
+          <button type="button" class="btn--iconbtn btn--padding-6 btn--no-border">
+            <img
+              class="btn__img--iconbtn-24"
+              src="./assets/icon/close-48.png"
+              alt="close icon"
+            />
+          </button>
+        </div>
+  
+        <div class="flex--horizontal flex--space-between">
+          <div class="form__div--section">
+            <div class="flex--horizontal flex--space-between">
+              <div class="flex__div--input-box width--40">
+                <label class="form__label" for="employee-id">
+                  Mã nhân viên <span class="span--must-have">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="employee-id"
+                />
+              </div>
+              <div class="flex__div--input-box width--60">
+                <label class="form__label" for="employee-name">
+                  Họ và tên <span class="span--must-have">*</span></label
+                >
+                <input class="form__input" type="text" id="employee-name" />
+              </div>
+            </div>
+            <div class="flex__div--input-box">
+              <label class="form__label" for="employee-position"> Vị trí</label>
+              <div
+                class="container--combobox no-margin width--100"
+                id="employee-position"
+              >
+                <div tabindex="1" class="div--combobox-trigger">
+                  <span class="div__span--current-value"></span>
+                  <button
+                    type="button"
+                    class="btn--no-border combobox__btn--iconbtn"
+                  >
+                    <img
+                      class="btn__img--iconbtn-24"
+                      src="./assets/icon/Layer 2@2x.png"
+                      alt="down-arrow"
+                    />
+                  </button>
+                </div>
+                <div id="combobox" class="div--combobox-options div--hidden">
+                  <span
+                    class="div__span--combobox-option"
+                    value="Chi nhánh Hà Nội"
+                    >Chi nhánh Hà Nội</span
+                  >
+                  <span
+                    class="div__span--combobox-option"
+                    value="Chi nhánh Hải Phòng"
+                    >Chi nhánh Hải Phòng</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex__div--input-box">
+              <label class="form__label" for="employee-department">
+                Phòng ban</label
+              >
+              <div
+                class="container--combobox no-margin width--100"
+                id="employee-department"
+              >
+                <div tabindex="1" class="div--combobox-trigger">
+                  <span class="div__span--current-value"></span>
+                  <button
+                    type="button"
+                    class="btn--no-border combobox__btn--iconbtn"
+                  >
+                    <img
+                      class="btn__img--iconbtn-24"
+                      src="./assets/icon/Layer 2@2x.png"
+                      alt="down-arrow"
+                    />
+                  </button>
+                </div>
+                <div id="combobox" class="div--combobox-options div--hidden">
+                  <span
+                    class="div__span--combobox-option"
+                    value="Chi nhánh Hà Nội"
+                    >Chi nhánh Hà Nội</span
+                  >
+                  <span
+                    class="div__span--combobox-option"
+                    value="Chi nhánh Hải Phòng"
+                    >Chi nhánh Hải Phòng</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form__div--section">
+            <div class="flex--horizontal flex--space-between">
+              <div class="flex__div--input-box">
+                <label class="form__label" for="employee-birth">
+                  Ngày sinh
+                </label>
+                <input
+                  value="2003-10-21"
+                  class="form__input form__input--width-220 input--custom-date-picker"
+                  type="date"
+                  id="employee-name"
+                />
+              </div>
+  
+              <div class="flex__div--input-box width--100">
+                <label class="form__label" for="employee-gender">
+                  Giới tính
+                </label>
+                <div
+                  class="form__div--radio-box flex--space-between flex--horizontal flex--ac"
+                >
+                  <input type="radio" name="gender" id="employee-gender" />Nam
+                  <input type="radio" name="gender" id="employee-gender" />Nữ
+                  <input type="radio" name="gender" id="employee-gender" />Khác
+                </div>
+              </div>
+            </div>
+            <div class="flex--horizontal flex--space-between">
+              <div class="flex__div--input-box width--100">
+                <label class="form__label" for="employee-id"> Số CMTND </label>
+                <input type="text" class="form__input width--100" id="employee-id" />
+              </div>
+  
+              <div class="flex__div--input-box">
+                <label class="form__label" for="employee-id-date">
+                  Ngày cấp
+                </label>
+                <input
+                  value="2003-10-21"
+                  class="form__input form__input--width-200 input--custom-date-picker"
+                  type="date"
+                  id="employee-id-date"
+                />
+              </div>
+            </div>
+            <div class="flex__div--input-box width--100">
+              <label class="form__label" for="employee-id-place">Nơi cấp </label>
+              <input type="text" class="form__input width--100" id="employee-id-place" />
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex__div--input-box width--100">
+          <label class="form__label" for="employee-add"> Địa chỉ </label>
+          <input type="text" class="form__input width--100" id="employee-add" />
+        </div>
+  
+        <div class="flex--horizontal flex--space-between width--100">
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-smart-phone"> ĐT Di động </label>
+            <input type="text" class="form__input width--100" id="employee-smart-phone" />
+          </div>
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-phone"> Đt Cố định </label>
+            <input type="text" class="form__input width--100" id="employee-phone" />
+          </div>
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-email"> Email </label>
+            <input type="text" class="form__input width--100" id="employee-email" />
+          </div>
+        </div>
+  
+        <div class="flex--horizontal flex--space-between width--100">
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-account-name"> Tài khoản ngân hàng </label>
+            <input type="text" class="form__input width--100" id="employee-account-name" />
+          </div>
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-bank-name"> Tên ngân hàng </label>
+            <input type="text" class="form__input width--100" id="employee-bank-name" />
+          </div>
+          <div class="flex__div--input-box width--100">
+            <label class="form__label" for="employee-bank-add"> Chi nhánh </label>
+            <input type="text" class="form__input width--100" id="employee-bank-add" />
+          </div>
+        </div>
+      </div>
+      <div class="form__div--btn-box flex--horizontal-reverse width--100">
+        <div class="flex--horizontal flex--gap-12">
+          <button type="button" class="form__btn form__btn--border">Hủy</button>
+          <button type="button" class="form__btn">Cắt</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

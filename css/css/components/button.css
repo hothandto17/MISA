@@ -1,0 +1,129 @@
+@import url(../variables/variables.css);
+
+.btn--iconbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn--iconbtn:hover{
+    background-color: #d6d6d6;
+}
+.btn--iconbtn:active{
+    background-color: #a5a5a5;
+}
+
+
+.combobox__btn--iconbtn{
+    width: 38px;
+    height: 36px;
+    border: none;
+    border-left: solid 1px #E6E6E6;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.btn--padding-6{
+    box-sizing: content-box;
+    padding: 6px;
+    border: solid 1px #E0E0E0;
+}
+
+.div__btn{
+    display: flex;
+    align-items: center;
+    width: 116px;
+    height: 36px;
+    border: none;
+    padding: 10px 16px 10px 13px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    justify-content: space-between;
+    
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: white;
+    font-weight: 500;
+}
+.div__btn:hover{
+    background-color: #6BC18D;
+}
+
+.div__btn:active{
+    background-color: #055B27;
+}
+
+.btn--no-border{
+    border: none;
+}
+
+.form__btn{
+    font-family: 'Roboto-medium';
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    min-width: 80px;
+    background-color: #50B83C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.form__btn:hover{
+    background-color: #6BC18D;
+}
+
+.form__btn:active{
+    background-color: #055B27;
+}
+
+.form__btn--border{
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    color: #212121;
+    font-family: 'Roboto-regular';
+    font-size: 14px;
+    font-weight: 400;
+}
+.form__btn--border:hover{
+    background-color: rgb(234, 232, 232);
+}
+
+.form__btn--border:active{
+    background-color: rgb(199, 198, 198);
+}
+.warning{
+    background-color: red;
+}
+.warning:hover{
+    background-color: #EB3333;
+}
+
+.warning:active{
+    background-color: #B80000;
+}
+
+#today_btn{
+    width: 100%;
+    height: 48px;
+    border: none;
+    background-color: white;
+    border-top: 1px solid #E0E1E4;
+
+    font-family: 'Roboto-medium';
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+}

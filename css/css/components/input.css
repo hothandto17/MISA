@@ -1,0 +1,101 @@
+.div__input--search {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+
+  border: none;
+  width: 100%;
+  padding: 0;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Remove default arrow for Webkit browsers */
+  -moz-appearance: none; /* Remove default arrow for Firefox */
+}
+.div__input--search:focus {
+  outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.div__input--number{
+  font-family: "Roboto";
+  font-weight: 400;
+
+  width: 20px;
+  border: none;
+  padding: 0;
+}
+.div__input--number:focus{
+  outline: none;
+}
+
+.form__input{
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Roboto-regular';
+  font-size: 14px;
+  font-weight: 400;
+  height: 36px;
+  width: 100%;
+  padding: 10px 12px 10px 12px ;
+  border: 1px solid #E0E0E0;
+  background-color: white;
+  border-radius: 4px;
+  margin: 0;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Remove default arrow for Webkit browsers */
+  -moz-appearance: none; /* Remove default arrow for Firefox */
+}
+.form__input:hover{
+  background-color: #F6F6F6;
+  border: 1px solid #EBEBEB;
+}
+.form__input:focus{
+  outline: none;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+.form__input--width-220{
+  width: 220px;
+}
+
+.form__input--width-240{
+  width: 240px;
+}
+.form__input--width-300{
+  width: 300px;
+}
+
+.form__input--width-200
+{
+  width: 200px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+.input--custom-date-picker::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../../assets/icon/date-picker.svg) no-repeat center center;
+  background-size: contain;
+  pointer-events: none; /* Ensure the icon doesn't interfere with input */
+}
+
+/* Styling for non-WebKit browsers */
+input[type="date"]::-ms-clear {
+  display: none;
+}
+input[type="date"]::-ms-reveal {
+  display: none;
+}
