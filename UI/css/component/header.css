@@ -1,0 +1,59 @@
+header {
+    background-color: #fff;
+}
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-container .header-left,
+.head-container .header-right {
+    display: flex;
+    align-items: center;
+}
+.head-container .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.head-container .branch-info {
+    margin-right: auto;
+    margin-left: 24px;
+    border: none;
+}
+.head-container .branch-info select {
+    border: none;
+}
+.head-container .branch-info .branch-name{
+    font-weight: bold;
+}
+.head-container .user-info {
+    display: flex;
+    align-items: center;
+}
+.menu-toggle-img {
+    height: 28px;
+    width: 28px;
+    margin-left: 20px;
+}
+.logo-img {
+    height: 46px;
+    margin: 9px 23px 9px 20px;
+}
+.avt-img {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    margin-right: 16px;
+
+}
+.username {
+    margin-right: 24px;
+
+}
+.option img {
+    height: 24px;
+    width: 24px;
+    margin-right: 40px;
+    filter: invert(64%) sepia(0%) saturate(0%) hue-rotate(207deg) brightness(89%) contrast(88%);
+}

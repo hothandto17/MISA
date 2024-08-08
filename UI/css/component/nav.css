@@ -1,0 +1,87 @@
+.content {
+    display: flex;
+}
+.content .nav-container{
+    background-color: #041434;
+    color: #ffffff;
+    width: 246px;
+    height: 846px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 24px;
+    transition: width 0.3s ease-in-out;
+}
+.menu-option{
+    display: flex;
+    height: 54px;
+    width: 220px;
+    align-items: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: 5px  ;
+}
+.menu-option img{
+    height: 24px;
+    width: 24px;
+    filter: brightness(0) invert(1);
+    margin-left: 12px;
+    margin-right: 16px;
+}
+.menu-option:hover{
+    background-color: #516794;
+    cursor: pointer;
+}
+
+/* //thu nhỏ menu */
+.content .minimize-menu {
+    display: flex;
+    flex-direction: column;
+}
+.minimize-menu:hover{
+    cursor: pointer;
+}
+.content .minimize-menu .minize-contain{
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    height: 46px;
+}
+.content .minimize-menu .minize-contain:hover{
+    cursor: pointer;
+}
+.content .minimize-menu .minize-contain p{
+    margin-left: 22px;
+}
+.separate{
+    height: 1px;
+    width: 100%;
+    background-color: #1f3153;
+}
+.content .nav-container.minimized {
+    width: 54px;
+}
+
+.content .nav-container.minimized .menu-option {
+    height: 52px;
+    width: 54px;
+    margin: 0;
+}
+.content .nav-container.minimized .menu-option img {
+    margin-right: 0;
+}
+
+.content .nav-container.minimized .option-name {
+    display: none;
+}
+.content .nav-container.minimized .minimize-text{
+    display: none;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}

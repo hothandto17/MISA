@@ -1,0 +1,192 @@
+.add-employee-form-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0000004f;
+}
+.add-employee-form-container {
+    display: none;
+}
+.add-employee-form-container.show {
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+.add-employee-form {
+    width: 1100px;
+    background-color: #fff;
+    margin: auto;
+    padding-left: 36px;
+    padding-bottom: 20px;
+    margin-top: 80px;
+    border-radius: 5px;
+
+}
+.add-employee-form input {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+}
+.add-employee-form-container .form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 36px;
+}
+.add-employee-form-container .employ-infor-row1 label {
+    display: block;
+}
+.form-header i {
+    margin-right: 44px;
+    width: 33px;
+    color: red;
+    text-align: center;
+}
+.form-header i:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.add-employee-form-container .employ-infor-row1,
+.add-employee-form-container .employ-infor-row2,
+.add-employee-form-container .employ-infor-row3,
+.add-employee-form-container .employ-infor-row4,
+.add-employee-form-container .employ-infor-row5,
+.add-employee-form-container .employ-infor-row6
+{
+
+    display: flex;
+}
+.add-employee-form-container .employ-infor-row1 .infor-label,
+.add-employee-form-container .employ-infor-row2 .infor-label,
+.add-employee-form-container .employ-infor-row3 .infor-label,
+.add-employee-form-container .employ-infor-row4 .infor-label,
+.add-employee-form-container .employ-infor-row5 .infor-label,
+.add-employee-form-container .employ-infor-row6 .infor-label{
+    display: flex;
+    align-items: center;
+}
+.add-employee-form-container .employ-infor-row1 .infor-label p{
+    color: red;
+}
+.add-employee-form-container .employ-infor-row1.update .infor-gen .gender-radiobutton{
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+}
+.add-employee-form-container .employ-infor-row1.add .infor-gen .gender-radiobutton{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.add-employee-form-container  input,
+.add-employee-form-container select{
+    height: 36px;
+    padding: 0;
+    border: 2px solid #ececec;
+    border-radius: 5px;
+
+}
+.add-employee-form-container .employ-infor-row1 .infor-id input,
+.add-employee-form-container .employ-infor-row1 .infor-dob input {
+    width: 230px;
+    margin-right: 10px;
+}
+.add-employee-form-container .employ-infor-row1 .infor-dob input{
+    width: 206px;
+}
+.add-employee-form-container .employ-infor-row1 .infor-name input{
+    width: 275px;
+    margin-right: 20px;
+}
+.add-employee-form-container .employ-infor-row1 .infor-dob p,
+.add-employee-form-container .employ-infor-row1 .infor-gen p,
+.add-employee-form-container .employ-infor-row2 .infor-position p,
+.add-employee-form-container .employ-infor-row2 .infor-CCCD-ngaycap p,
+.add-employee-form-container .employ-infor-row3 .infor-phongban p,
+.add-employee-form-container .employ-infor-row3 .infor-noicap p,
+.add-employee-form-container .employ-infor-row4 .infor-add p,
+.add-employee-form-container .employ-infor-row5 .infor-didong p,
+.add-employee-form-container .employ-infor-row5 .infor-codinh p,
+.add-employee-form-container .employ-infor-row5 .infor-mail p
+{
+    visibility: hidden;
+}
+.add-employee-form-container .employ-infor-row5.note .infor-codinh p,
+.add-employee-form-container .employ-infor-row5.note .infor-didong p,
+.add-employee-form-container .employ-infor-row5.note .infor-mail p,
+.add-employee-form-container .employ-infor-row2 .infor-CCCD p
+{
+    visibility: inherit;
+    color: red;
+}
+.add-employee-form-container .employ-infor-row2 .infor-position select,
+.add-employee-form-container .employ-infor-row3 .infor-phongban select{
+    width: 524px    ;
+    margin-right: 20px;
+    height: 40px;
+    display: block;
+}
+.infor-CCCD input {
+    width: 320px;
+    margin-right: 10px;
+}
+
+.infor-CCCD-ngaycap input{
+    width: 180px;
+}
+.add-employee-form-container .employ-infor-row3 .infor-noicap input {
+    width: 514px;
+}
+.add-employee-form-container .employ-infor-row4 .infor-add input {
+    width: 1052px;
+} 
+.add-employee-form-container .employ-infor-row5 input {
+    width: 342px;
+    margin-right: 10px;
+}
+
+.employ-infor-row6 {
+    margin-left: 898px;
+    margin-top: 40px;
+}
+.employ-infor-row6 .cancel {
+    width: 80px;
+    height: 40px;
+    border: 2px solid #ececec;
+    border-radius: 5px;
+    background-color: #fff;
+    counter-reset: black;
+    margin-right: 10px;
+}
+.employ-infor-row6 .cancel:hover{
+    cursor: pointer;
+    background-color: #0e6636;
+    color: #fff;
+}
+.employ-infor-row6 .submit {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #089740;
+    color   : #fff;
+    border: none;
+    margin-right: 10px;
+}
+.employ-infor-row6 .submit:hover {
+    cursor: pointer;
+    background-color: #0e6636;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+.gender-radiobutton.add{
+    margin-top: 200px;
+}
+.submit.update .update-id{
+    display: none;
+}
+.add-employee-form-container .employ-infor-row5.note .infor-codinh p {
+    visibility: hidden;
+  }

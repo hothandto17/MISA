@@ -1,0 +1,23 @@
+@import url(../css/component/nav.css);
+@import url(../css/component/header.css);
+@import url(../css/component/form.css);
+@import url(../css/component/content.css);
+@import url(../css/component/loading.css);
+@import url(../css/component/popup.css);
+@import url(../css/component/toast.css);
+@import url(./font.css);
+body {
+  font-family: GoogleSands;
+}
+@font-face {
+  font-family: GoogleSands;
+  src: url(../Resource/font/GoogleSans-Regular.otf);
+}
+@font-face {
+  font-family: GoogleSands bold;
+  src: url(../Resource/font/GoogleSans-Bold.otf);
+}
+@font-face {
+  font-family: GoogleSands italic;
+  src: url(../Resource/font/GoogleSans-Italic.otf);
+}

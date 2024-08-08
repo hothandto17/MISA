@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Nhân Viên</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="add-employee-form-container" id="AddDialog">
+      <div class="add-employee-form add">
+        <div class="form-header add">
+          <p class="form-name add">Thêm mới nhân viên</p>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="employ-infor-row1 add">
+          <!-- Mã nhân viên -->
+          <div class="infor-id add">
+            <div class="infor-label add">
+              <label>Mã nhân viên</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="idAdd" />
+            <div class="error-message" id="errorId"></div>
+          </div>
+          <!-- Tên nhân viên -->
+          <div class="infor-name add">
+            <div class="infor-label add">
+              <label>Tên nhân viên</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="nameAdd" />
+            <div class="error-message" id="errorName"></div>
+          </div>
+          <!-- Ngày sinh -->
+          <div class="infor-dob add">
+            <div class="infor-label add">
+              <label>Ngày sinh</label>
+              <p>*</p>
+            </div>
+            <input type="date" id="birthdayAdd" name="birthday" />
+            <div class="error-message" id="errorBirthday"></div>
+          </div>
+          <!-- Giới tính -->
+          <div class="infor-gen add">
+            <div class="infor-label add">
+              <label>Giới tính</label>
+              <p>*</p>
+            </div>
+            <div class="gender-radiobutton add">
+              <input type="radio" id="maleAdd" name="gender" value="Nam" />
+              <label for="maleAdd">Nam</label>
+              <input type="radio" id="femaleAdd" name="gender" value="Nữ" />
+              <label for="femaleAdd">Nữ</label>
+              <input type="radio" id="otherAdd" name="gender" value="Khác" />
+              <label for="otherAdd">Khác</label>
+            </div>
+            <div class="error-message" id="errorGender"></div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="employ-infor-row2 add">
+          <!-- Vị trí -->
+          <div class="infor-position add">
+            <div class="infor-label add">
+              <label>Vị trí</label>
+              <p>*</p>
+            </div>
+            <div class="position-combobox add">
+              <select name="position" id="positionAdd">
+                
+              </select>
+              <div class="error-message" id="errorPosition"></div>
+            </div>
+          </div>
+          <!-- Số CMTND -->
+          <div class="infor-CCCD add">
+            <div class="infor-label add">
+              <label>Số CMTND</label>
+              <p>*</p>
+            </div>
+            <input type="number" id="cccdAdd" />
+            <div class="error-message" id="errorCccd"></div>
+          </div>
+          <!-- Ngày cấp -->
+          <div class="infor-CCCD-ngaycap add">
+            <div class="infor-label add">
+              <label>Ngày cấp</label>
+              <p>*</p>
+            </div>
+            <input type="date" id="cccd-ngaycapAdd" name="cccd-ngaycap" />
+            <div class="error-message" id="errorCccdDate"></div>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="employ-infor-row3 add">
+          <!-- Phòng ban -->
+          <div class="infor-phongban add">
+            <div class="infor-label add">
+              <label>Phòng ban</label>
+              <p>*</p>
+            </div>
+            <div class="phongban-combobox add">
+              <select name="phongban" id="phongbanAdd">
+              </select>
+              <div class="error-message" id="errorPhongban"></div>
+            </div>
+          </div>
+          <!-- Nơi cấp -->
+          <div class="infor-noicap add">
+            <div class="infor-label add">
+              <label>Nơi cấp</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="noicapAdd" />
+            <div class="error-message" id="errorNoicap"></div>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="employ-infor-row4 add">
+          <!-- Địa chỉ -->
+          <div class="infor-add add">
+            <div class="infor-label add">
+              <label>Địa chỉ</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="addAdd" />
+            <div class="error-message" id="errorAddress"></div>
+          </div>
+        </div>
+        <!-- Row 5 -->
+        <div class="employ-infor-row5 add note">
+          <!-- ĐT Di động -->
+          <div class="infor-didong add">
+            <div class="infor-label add">
+              <label>ĐT Di động</label>
+              <p>*</p>
+            </div>
+            <input type="number" id="didongAdd" />
+            <div class="error-message" id="errorMobile"></div>
+          </div>
+          <!-- ĐT cố định -->
+          <div class="infor-codinh add">
+            <div class="infor-label add">
+              <label>ĐT cố định</label>
+              <p>*</p>
+            </div>
+            <input type="number" id="codinhAdd" />
+            <div class="error-message" id="errorPhone"></div>
+          </div>
+          <!-- Email -->
+          <div class="infor-mail add">
+            <div class="infor-label add">
+              <label>Email</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="mailAdd" />
+            <div class="error-message" id="errorEmail"></div>
+          </div>
+        </div>
+        <div class="employ-infor-row5 add">
+          <div class="infor-didong add">
+            <div class="infor-label add">
+              <label>Tài khoảng ngân hàng</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="bankaccAdd" />
+          </div>
+          <div class="infor-codinh add">
+            <div class="infor-label add">
+              <label>Ngân hàng</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="bankAdd" />
+          </div>
+          <div class="infor-mail add">
+            <div class="infor-label add">
+              <label>Chi nhánh</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="bankbranchAdd" />
+          </div>
+        </div>
+        <!-- Row 6 -->
+        <div class="employ-infor-row6 add">
+          <button class="cancel add">Hủy</button>
+          <button class="submit add">Thêm</button>
+        </div>
+      </div>
+    </div>
+    <div class="add-employee-form-container update" id="UpdateDialog">
+      <div class="add-employee-form update">
+        <div class="form-header update">
+          <p class="form-name update">Thông tin nhân viên</p>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="employ-infor-row1 update">
+          <div class="infor-id update">
+            <div class="infor-label update">
+              <label>Mã nhân viên</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="idUpdate" />
+            <div class="error-message update" id="errorIdupdate"></div>
+          </div>
+          <div class="infor-name update">
+            <div class="infor-label update">
+              <label>Tên nhân viên</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="nameUpdate" />
+            <div class="error-message update" id="errorNameupdate"></div>
+          </div>
+          <div class="infor-dob update">
+            <div class="infor-label update">
+              <label>Ngày sinh</label>
+              <p>*</p>
+            </div>
+            <input type="date" id="birthdayUpdate" name="birthday" />
+            <div class="error-message" id="errorDOBUpdate"></div>
+          </div>
+          <div class="infor-gen update">
+            <div class="infor-label update">
+              <label>Giới tính</label>
+              <p>*</p>
+            </div>
+             
+            <div class="gender-radiobutton update">
+              <input type="radio" id="maleUpdate" name="gender" value="Nam" />  
+              <label for="male">Nam</label>
+               
+              <input type="radio" id="femaleUpdate" name="gender" value="Nữ" />
+               
+              <label for="female">Nữ</label>
+               
+              <input type="radio" id="otherUpdate" name="gender" value="Khác" />
+               
+              <label for="other">Khác</label>
+            </div>
+          </div>
+        </div>
+        <div class="employ-infor-row2 update">
+          <div class="infor-position update">
+            <div class="infor-label update">
+              <label>Vị trí</label>
+              <p>*</p>
+            </div>
+            <div class="position-combobox update">
+              <select name="position" id="positionUpdate">
+                
+              </select>
+            </div>
+          </div>
+          <div class="infor-CCCD update">
+            <div class="infor-label update">
+              <label>Số CMTND</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="cccdUpdate" />
+            <div class="error-message update" id="errorCccdupdate"></div>
+          </div>
+          <div class="infor-CCCD-ngaycap update">
+            <div class="infor-label update">
+              <label>Ngày cấp</label>
+              <p>*</p>
+            </div>
+            <input type="date" id="cccd-ngaycapUpdate" name="cccd-ngaycap" />
+            <div class="error-message" id="errorNgaycapUpdate"></div>
+          </div>
+        </div>
+        <div class="employ-infor-row3 update">
+          <div class="infor-phongban update">
+            <div class="infor-label update">
+              <label>Phòng ban</label>
+              <p>*</p>
+            </div>
+            <div class="phongban-combobox update">
+              <select name="phongban" id="phongbanUpdate">
+              </select>
+            </div>
+          </div>
+          <div class="infor-noicap update">
+            <div class="infor-label update">
+              <label>Nơi cấp</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="noicapUpdate" />
+          </div>
+        </div>
+        <div class="employ-infor-row4 update">
+          <div class="infor-add update">
+            <div class="infor-label update">
+              <label>Địa chỉ</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="addUpdate" />
+          </div>
+        </div>
+        <div class="employ-infor-row5 update note">
+          <div class="infor-didong update">
+            <div class="infor-label update">
+              <label>ĐT Di động</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="didongUpdate" />
+            <div class="error-message" id="errorMobileupdate"></div>
+          </div>
+          <div class="infor-codinh update">
+            <div class="infor-label update">
+              <label>ĐT cố định</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="codinhUpdate" />
+            <div class="error-message" id="errorPhoneUpdate"></div>
+          </div>
+          <div class="infor-mail update">
+            <div class="infor-label update">
+              <label>Email</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="mailUpdate" />
+            <div class="error-message update" id="errorMailupdate"></div>
+          </div>
+        </div>
+        <div class="employ-infor-row5 update">
+          <div class="infor-didong update">
+            <div class="infor-label update">
+              <label>Tài khoản ngân hàng</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="bankaccUpdate" />
+          </div>
+          <div class="infor-codinh update">
+            <div class="infor-label update">
+              <label>Ngân hàng</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="bankUpdate" />
+          </div>
+          <div class="infor-mail update">
+            <div class="infor-label update">
+              <label>Chi nhánh</label>
+              <p>*</p>
+            </div>
+            <input type="text" id="bankbranchUpdate" />
+          </div>
+        </div>
+        <div class="employ-infor-row6 update">
+          <button class="cancel update">Hủy</button>
+          <button class="submit update">Sửa <p class="update-id"></p></button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="head-container">
+        <div class="header-left">
+          <div class="menu-toggle">
+            <img
+              class="menu-toggle-img"
+              src="./Resource/img/toggle.png"
+              alt="toggle"
+            />
+          </div>
+          <div class="logo">
+            <img
+              class="logo-img"
+              src="./Resource/cukcuk-logo.png"
+              alt="cukcuk logo"
+            />
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="branch-info">
+            <select class="branch-select">
+              <option value="hanoi">Chi nhánh Hà Nội</option>
+              <option value="hanoi">Chi nhánh Nghệ An</option>
+              <option value="hanoi">Chi nhánh Hồ Chí Minh</option>
+            </select>
+          </div>
+          <div class="user-info">
+            <img
+              src="./Resource/icon/avatar-default.png"
+              alt="avt"
+              class="avt-img"
+            />
+            <p class="username">Hồ Sĩ Toàn</p>
+            <div class="option">
+              <img src="Resource/icon/option.png" alt="option" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <nav>
+        <div class="nav-container">
+          <div class="menu-list">
+            <div class="menu-option">
+              <img
+                class="option-img"
+                src="Resource/icon/dashboard.png"
+                alt=""
+              />
+              <p class="option-name">Trang chủ</p>
+            </div>
+            <div class="menu-option">
+              <img class="option-img" src="./Resource/icon/report.png" alt="" />
+              <p class="option-name">Báo cáo</p>
+            </div>
+            <div class="menu-option">
+              <img
+                class="option-img"
+                src="./Resource/icon/dic-employee.png"
+                alt=""
+              />
+              <p class="option-name">Nhân viên</p>
+            </div>
+            <div class="menu-option">
+              <img
+                class="option-img"
+                src="./Resource/icon/setting.png"
+                alt=""
+              />
+              <p class="option-name">Cài đặt</p>
+            </div>
+          </div>
+          <div class="minimize-menu">
+            <div class="separate"></div>
+            <div class="minize-contain">
+              <i class="fa-solid fa-angle-left"></i>
+              <p class="minimize-text">Thu gọn</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main-content">
+        <div class="content-header">
+          <div class="content-name">
+            <p>Quản lí nhân viên</p>
+          </div>
+          <button class="add-employee" id="btnAdd">
+            <img class="add-employee-icon" src="Resource/icon/add.png" />
+            <p class="add-action">Thêm mới</p>
+          </button>
+        </div>
+        <div class="content-body">
+          <div class="search-dowload-refresh">
+            <div class="search">
+              <input
+                type="text"
+                id="search"
+                placeholder="Tìm kiếm theo mã, họ tên"
+              />
+              <img class="search-icon" src="Resource/icon/search.png" />
+            </div>
+            <div class="dowload-refresh">
+              <div class="dowload-container" id="download">
+                <img
+                  class="dowload-icon"
+                  src="Resource/icon/export-excel-50.png"
+                />
+              </div>
+              <div title="Tải lại bảng" class="refresh-container">
+                <img class="refresh-icon" src="Resource/icon/refresh.png" />
+              </div>
+            </div>
+          </div>
+          <div class="table-employee-contain">
+            <table class="table-employee">
+              <thead class="table-head">
+                <tr>
+                  <th class="num"><div class="header-content">STT</div></th>
+                  <th class="id">
+                    <div class="header-content">Mã nhân viên</div>
+                  </th>
+                  <th class="name">
+                    <div class="header-content">Họ và tên</div>
+                  </th>
+                  <th class="gen">
+                    <div class="header-content">Giới tính</div>
+                  </th>
+                  <th class="dob">
+                    <div class="header-content">Ngày sinh</div>
+                  </th>
+                  <th class="mail">
+                    <div class="header-content">Địa chỉ Email</div>
+                  </th>
+                  <th class="add"><div class="header-content">Địa chỉ</div></th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr>
+                  <td><div class="cell-content num">1</div></td>
+                  <td><div class="cell-content id">NV001</div></td>
+                  <td><div class="cell-content name">Nguyễn Văn A</div></td>
+                  <td><div class="cell-content gen">Nam</div></td>
+                  <td><div class="cell-content dob">1990-01-01</div></td>
+                  <td><div class="cell-content mail">nv.a@gmail.com</div></td>
+                  <td class="about-employee add">
+                    <div class="cell-content">Hà Nội</div>
+                    <div class="employee-interact">
+                      <div class="update-container">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                      <div class="delete-container">
+                        <img
+                          class="delete-icon"
+                          src="Resource/icon/delete-48.png"
+                        />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="content-footer">
+            <div class="sum">
+              <p>Tổng: ...</p>
+            </div>
+            <div class="footer-right">
+              <p>Số bản ghi/trang</p>
+              <p class="amount">100</p>
+              <div class="increase-decrease-amount">
+                <i class="fa-solid fa-angle-up"></i>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <i class="fa-solid fa-angle-left"></i>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="m-loading">
+      <div class="m-loading-icon"></div>
+    </div>
+
+    <div class="popup-container delete">
+      <div class="popup">
+        <div class="popup-head">
+          <p class="popup-name">Xóa nhân viên ?</p>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <p class="popup-desc">Hành này sẽ xóa một nhân viên</p>
+        <div class="popup-buttons">
+          <button class="popup-cancel"><p class="cancel-text">Hủy</p></button>
+          <button class="popup-continue">
+            <p class="continue-text">Tiếp tục</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container">
+      <div class="toast-left">
+        <div><i class="fa-solid fa-circle-check"></i></div>
+        <p class="status">Thành công !</p>
+        <p class="status-desc">Đã thành công</p>
+      </div>
+      <i class="fa-solid fa-xmark" id="close-toast"></i>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/pages/employee.js"></script>
+    <script>
+      document.getElementById('download').addEventListener('click', function() {
+          // Lấy bảng nhân viên
+          let table = document.querySelector('.table-employee');
+          let rows = Array.from(table.rows);
+  
+          // Tạo nội dung CSV
+          let csvContent = "data:text/csv;charset=utf-8,";
+          rows.forEach(function(row) {
+              let cols = Array.from(row.cells);
+              let rowContent = cols.map(col => col.textContent.trim()).join(",");
+              csvContent += rowContent + "\r\n";
+          });
+  
+          // Tạo liên kết tải xuống
+          let encodedUri = encodeURI(csvContent);
+          let link = document.createElement("a");
+          link.setAttribute("href", encodedUri);
+          link.setAttribute("download", "employee_list.csv");
+          document.body.appendChild(link);
+  
+          // Nhấp vào liên kết để tải xuống
+          link.click();
+          document.body.removeChild(link); 
+      });
+  </script>
+  
+  </body>
+</html>

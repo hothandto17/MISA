@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\00 Hoc Onl\\TTTN\\BTTT\\Ki\u1EBFn tr\u00FAc th\u01B0\u1EDDng\\BE\\MISA.Web2024\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C736174-C5EC-4FC9-B307-FEB30FBFB6F9}|MISA.Web2024.Api\\MISA.Web2024.Api.csproj|e:\\00 hoc onl\\tttn\\bttt\\ki\u1EBFn tr\u00FAc th\u01B0\u1EDDng\\be\\misa.web2024\\misa.web2024.api\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C736174-C5EC-4FC9-B307-FEB30FBFB6F9}|MISA.Web2024.Api\\MISA.Web2024.Api.csproj|solutionrelative:misa.web2024.api\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "E:\\00 Hoc Onl\\TTTN\\BTTT\\Ki\u1EBFn tr\u00FAc th\u01B0\u1EDDng\\BE\\MISA.Web2024\\MISA.Web2024.Api\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "MISA.Web2024.Api\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "E:\\00 Hoc Onl\\TTTN\\BTTT\\Ki\u1EBFn tr\u00FAc th\u01B0\u1EDDng\\BE\\MISA.Web2024\\MISA.Web2024.Api\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "MISA.Web2024.Api\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T13:19:52.723Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
