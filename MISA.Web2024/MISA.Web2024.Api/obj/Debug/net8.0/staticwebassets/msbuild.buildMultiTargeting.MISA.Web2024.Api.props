@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\MISA.Web2024.Api.props" />
-</Project>
