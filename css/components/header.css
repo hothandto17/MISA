@@ -1,7 +1,0 @@
-.mheader{
-    background-color: #fff;
-    display: grid;
-    grid-template: 56px / 56px 144px 1fr repeat(3,auto);
-    align-items: center;
-    justify-items: center;
-}
